@@ -1,46 +1,103 @@
-# Getting Started with Create React App
+# Wandr Frontend 🎨
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the React frontend for Wandr - your intelligent travel companion. Built with modern web technologies and designed for an exceptional user experience.
 
-## Available Scripts
+## 🚀 Quick Start
 
-In the project directory, you can run:
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
 
-### `npm start`
+### Installation
+```bash
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Environment Setup
+Create a `.env` file in the client directory with your API keys:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```env
+# Firebase Configuration
+REACT_APP_apiKey=your_firebase_api_key
+REACT_APP_authDomain=wandr.firebaseapp.com
+REACT_APP_projectId=wandr
+REACT_APP_storageBucket=wandr.appspot.com
+REACT_APP_messagingSenderId=your_messaging_sender_id
+REACT_APP_appId=your_app_id
+REACT_APP_measurementId=your_measurement_id
 
-### `npm test`
+# Google Maps API Key
+REACT_APP_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Optional: Additional API Keys
+REACT_APP_GEMINI_API_KEY=your_gemini_api_key
+REACT_APP_GOOGLE_PLACES_API_KEY=your_google_places_api_key
+REACT_APP_GOOGLE_PEOPLE_API_KEY=your_google_people_api_key
+```
 
-### `npm run build`
+### Development
+```bash
+npm start
+```
+Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Build for Production
+```bash
+npm run build
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **React 18** - Modern React with hooks and functional components
+- **TypeScript** - Type-safe development
+- **Material-UI** - Beautiful, responsive design system
+- **Firebase Auth** - User authentication and management
+- **Google Maps API** - Interactive maps and location services
+- **React Router** - Client-side routing
+- **Axios** - HTTP client for API calls
 
-### `npm run eject`
+## 📁 Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+src/
+├── components/          # Reusable UI components
+│   ├── landing/        # Landing page components
+│   └── onboarding/     # Onboarding flow components
+├── pages/              # Main page components
+├── services/           # API and external service integrations
+├── models/             # TypeScript type definitions
+├── context/            # React context providers
+├── utils/              # Utility functions
+├── constants/          # App constants and configurations
+└── assets/             # Images, fonts, and static files
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🎯 Key Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **Responsive Design** - Works perfectly on desktop, tablet, and mobile
+- **Type Safety** - Full TypeScript support for better development experience
+- **Modern UI** - Clean, intuitive interface with Material-UI components
+- **Real-time Updates** - Live data from Firebase and external APIs
+- **Progressive Web App** - Installable and works offline
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🔧 Available Scripts
 
-## Learn More
+- `npm start` - Start development server
+- `npm test` - Run test suite
+- `npm run build` - Build for production
+- `npm run eject` - Eject from Create React App (not recommended)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🌐 Browser Support
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## 📱 Mobile Support
+
+The app is fully responsive and optimized for mobile devices with touch-friendly interactions and mobile-first design principles.
+
+---
+
+**Wandr Frontend** - Built with ❤️ using modern web technologies

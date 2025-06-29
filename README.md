@@ -1,102 +1,160 @@
-# Nested
+# Wandr 🌍
 
-Nested helps you move to a new city with ease by matching you with places based on your lifestyle preferences. By analyzing your Google Maps search history, Nested understands your preferences and provides tailored suggestions for nearby grocery stores, gyms, museums, or any type of place you can think of!
+Wandr is your intelligent travel companion that helps you discover the perfect places in any city based on your lifestyle preferences. By analyzing your preferences and using advanced AI, Wandr provides personalized recommendations for restaurants, attractions, activities, and hidden gems that match your unique style.
 
-## Getting Started
+## ✨ Features
 
-These instructions will guide you on how to set up and run Nested locally for development and testing purposes.
+- **Smart Recommendations**: AI-powered suggestions based on your preferences
+- **Interactive Maps**: Explore locations with Google Maps integration
+- **Personalized Onboarding**: Tell us what you like and we'll find your perfect spots
+- **Save Favorites**: Build your personal collection of favorite places
+- **Social Features**: Share and discover recommendations with friends
+- **Real-time Updates**: Get the latest information about places and events
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-To run Nested, you will need:
+- Node.js (v14 or higher) and npm
+- Python 3.8+ and pip
+- Firebase project
+- Google Maps API key
 
-- Node.js and npm for the client
-- Python 3 and pip for the server
+### Installation
 
-### Installing
+#### 1. Clone the Repository
+```bash
+git clone https://github.com/sarakhan7/wandr.git
+cd wandr
+```
 
-Follow these steps to get your development environment running:
+#### 2. Set Up the Frontend (React)
+```bash
+cd client
+npm install
+```
 
-#### Client
+Create a `.env` file in the `client` directory:
+```env
+# Firebase Configuration
+REACT_APP_apiKey=your_firebase_api_key
+REACT_APP_authDomain=wandr.firebaseapp.com
+REACT_APP_projectId=wandr
+REACT_APP_storageBucket=wandr.appspot.com
+REACT_APP_messagingSenderId=your_messaging_sender_id
+REACT_APP_appId=your_app_id
+REACT_APP_measurementId=your_measurement_id
 
-1. Clone the repository and navigate to the client directory:
-   ```bash
-   cd client
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the React client:
-   ```bash
-   npm run start
-   ```
+# Google Maps API Key
+REACT_APP_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
 
-#### Server
+# Optional: Additional API Keys
+REACT_APP_GEMINI_API_KEY=your_gemini_api_key
+REACT_APP_GOOGLE_PLACES_API_KEY=your_google_places_api_key
+REACT_APP_GOOGLE_PEOPLE_API_KEY=your_google_people_api_key
+```
 
-1. Navigate to the server directory:
-   ```bash
-   cd server
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   # Install any other necessary packages
-   ```
-3. Start the Flask Server:
-   ```bash
-   python3 server.py
-   ```
+Start the development server:
+```bash
+npm start
+```
 
-### Configuration
+#### 3. Set Up the Backend (Flask)
+```bash
+cd ../server
+pip install -r requirements.txt
+```
 
-Before running the application, You will need Firebase Auth or GCP API credentials to get the necessary information.
+Create a `.env` file in the `server` directory:
+```env
+REACT_APP_GEMINI_API_KEY=your_gemini_api_key
+REACT_APP_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+REACT_APP_PLACES_API_KEY=your_google_places_api_key
+```
 
-1. Create `.env` files in both the client and server directories. Below is an example of what the `.env` file might look like:
+Start the Flask server:
+```bash
+python server.py
+```
 
-   ```plaintext
-   # Client
-    REACT_APP_apiKey=YOUR_API_KEY
-    REACT_APP_authDomain=YOUR_AUTH_DOMAIN
-    REACT_APP_projectId=YOUR_PROJECT_ID
-    REACT_APP_storageBucket=YOUR_STORAGE_BUCKET
-    REACT_APP_messagingSenderId=YOUR_MESSAGING_SENDER_ID
-    REACT_APP_appId=YOUR_APP_ID
-    REACT_APP_measurementId=YOUR_MEASUREMENT_ID
+## 🛠️ Tech Stack
 
-    REACT_APP_peopleAPIKey=YOUR_PEOPLE_API_KEY
-    REACT_APP_googleMapsAPIKey=YOUR_GOOGLE_MAPS_API_KEY
+### Frontend
+- **React 18** with TypeScript
+- **Material-UI** for beautiful, responsive design
+- **Firebase Auth** for user authentication
+- **Google Maps API** for location services
+- **React Router** for navigation
 
-    REACT_APP_geminiAIKey=YOUR_GEMINI_AI_KEY
-   ```
+### Backend
+- **Flask** (Python) for API endpoints
+- **Google Places API** for location data
+- **Gemini AI** for intelligent recommendations
+- **Firebase** for database and authentication
 
-   ```plaintext
-   # Server
-   export REACT_APP_geminiAIKey=YOUR_GEMINI_AI_KEY
-   export REACT_APP_googleMapsAPIKey=YOUR_GOOGLE_MAPS_API_KEY
-   export REACT_APP_placesAPIKey=YOUR_PLACES_API_KEY
-   ```
+### APIs & Services
+- Google Maps Platform
+- Google Places API
+- Google Distance Matrix API
+- Google Geocoding API
+- Gemini AI API
+- Firebase Authentication & Database
 
-## Built With
+## 📱 How It Works
 
-- **Frontend**: React, TypeScript, Material UI
-- **Backend**: Flask, Python
-- **APIs**: Google Places API, Distance Matrix API, Geocoding API, Identity Toolkit API, Maps Javascript API, Generative Language API, Token Service API, Google Drive API, & People API
-- **Database and Authentication**: Firebase
+1. **Sign Up & Onboard**: Create an account and tell us about your preferences
+2. **Discover**: Get personalized recommendations based on your style
+3. **Explore**: Use interactive maps to find and explore places
+4. **Save**: Build your personal collection of favorite locations
+5. **Share**: Connect with friends and share amazing discoveries
 
-## Contributing
+## 🔧 Configuration
 
-If you're interested in contributing to Nested, please read through the project files and contact the main author to see how you can help.
+### Required API Keys
 
-### Main Author
+1. **Firebase Project**: Create a new project at [Firebase Console](https://console.firebase.google.com/)
+2. **Google Maps API**: Get your API key from [Google Cloud Console](https://console.cloud.google.com/)
+3. **Optional APIs**: Gemini AI, Google Places, Google People API
 
-- **Eesha Moona** - _Initial work_ - [eeshamoona@gmail.com](mailto:eeshamoona@gmail.com)
+### Environment Variables
 
-## Acknowledgments
+Make sure to set up all required environment variables in your `.env` files. Never commit these files to version control!
 
-- Thanks to all the developers and contributors who made this project possible.
-- Special thanks to Google for providing the APIs that power our application.
+## 🚀 Deployment
 
-## License
+### Frontend Deployment
+```bash
+cd client
+npm run build
+```
 
-This project is licensed under the MIT License - see the LICENSE file in the repository for more details.
+### Backend Deployment
+The Flask server can be deployed to:
+- Google App Engine
+- Heroku
+- Railway
+- Any Python hosting platform
+
+## 🤝 Contributing
+
+We welcome contributions! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Built with modern web technologies and AI-powered recommendations
+- Special thanks to Google for providing the APIs that power our application
+- Inspired by the desire to make travel and exploration more personalized and enjoyable
+
+---
+
+**Wandr** - Discover your world, one adventure at a time! 🌟
