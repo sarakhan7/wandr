@@ -18,6 +18,7 @@ import "./App.css";
 import MyNestPage from "./pages/MyNestPage";
 import ExplorePage from "./pages/ExplorePage";
 import "@fontsource/inter";
+import TryItOutPage from "./components/landing/TryItOutPage";
 
 const MATERIAL_THEME = createTheme({
   typography: {
@@ -65,11 +66,7 @@ function App() {
               />
               <Route
                 path="/onboarding/*"
-                element={
-                  <Protected>
-                    <OnboardingPage />
-                  </Protected>
-                }
+                element={<OnboardingPage />}
               />
               <Route
                 path="/my-nest"
@@ -87,6 +84,7 @@ function App() {
                   </Protected>
                 }
               />
+              <Route path="/try" element={<TryItOutPage />} />
               <Route path="/" element={<LandingPage />} />
               <Route path="/login" element={<SignInPage />} />
               <Route path="/not-found" element={<NotFoundPage />} />

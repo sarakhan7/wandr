@@ -1,7 +1,9 @@
 import React from "react";
 import { Grid, Typography, Button, Box, Stack } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const TryItOutPage = () => {
+  const navigate = useNavigate();
   return (
     <div
       style={{
@@ -25,7 +27,7 @@ const TryItOutPage = () => {
         <Grid item xs={12} sx={{ display: "flex", justifyContent: "center" }}>
           <Box sx={{ mr: 5, textAlign: "center" }}>
             <Stack direction="column" spacing={1}>
-              <Button variant="contained" color="success">
+              <Button variant="contained" color="success" onClick={() => navigate("/onboarding/intro?demo=true")}>
                 Launch Demo
               </Button>
               <Typography variant="caption" color="textSecondary">

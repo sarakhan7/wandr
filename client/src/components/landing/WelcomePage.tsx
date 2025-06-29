@@ -1,7 +1,10 @@
 import React from "react";
 import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const WelcomePage = () => {
+  const navigate = useNavigate();
+
   return (
     <div
       style={{
@@ -24,8 +27,7 @@ const WelcomePage = () => {
           marginTop: "2rem",
         }}
       >
-        {/* TODO: These are not routed! */}
-        <Button color="success" variant="contained">
+        <Button color="success" variant="contained" onClick={() => navigate("/try")}>
           Try a Demo
         </Button>
         <Button color="success" variant="outlined" href="/login">

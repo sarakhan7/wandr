@@ -85,27 +85,27 @@ const LandingPage = () => {
       {
         id: "hero",
         title: "Welcome to Wandr",
-        content: WelcomePage(),
+        content: <WelcomePage />,
       },
       {
         id: "how-it-works",
         title: "How It Works",
-        content: HowItWorksPage(),
+        content: <HowItWorksPage />,
       },
       {
         id: "about",
         title: "About Us",
-        content: AboutUsPage(),
+        content: <AboutUsPage />,
       },
       {
         id: "success",
         title: "Our Success",
-        content: SuccessPage(),
+        content: <SuccessPage />,
       },
       {
         id: "try-it-out",
         title: "Try It Out!",
-        content: TryItOutPage(),
+        content: <TryItOutPage />,
       },
     ],
     // eslint-disable-next-line react-hooks/exhaustive-deps

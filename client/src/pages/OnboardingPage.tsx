@@ -8,6 +8,7 @@ import {
   Button,
   Box,
   Stack,
+  Alert,
 } from "@mui/material";
 import OnboardTransportation from "../components/onboarding/OnboardTransportation";
 import OnboardPreferences from "../components/onboarding/OnboardPreferences";
@@ -35,6 +36,7 @@ const CustomStepIcon = (props: any) => {
 const OnboardingPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const isDemo = new URLSearchParams(location.search).get("demo") === "true";
   const [activeStep, setActiveStep] = useState(0);
   const saveDataRef = useRef<(() => void) | null>(null);
 
@@ -130,6 +132,11 @@ const OnboardingPage = () => {
 
   return (
     <div style={styles.container}>
+      {isDemo && (
+        <Alert severity="info" sx={{ mb: 2, width: "100%" }}>
+          You are in <b>Demo Mode</b>. Your data will not be saved and no login is required.
+        </Alert>
+      )}
       <Stack direction={"row"} alignItems={"center"} width="100%">
         <Box>
           <img
